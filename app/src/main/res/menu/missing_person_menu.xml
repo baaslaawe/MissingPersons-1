@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_poster"
+        app:showAsAction="never"
+        android:title="View Poster"/>
+    <item
+        android:id="@+id/action_share"
+        app:showAsAction="never"
+        android:title="Share"
+        />
+    <item
+        android:id="@+id/action_report_sighting"
+        android:icon="@drawable/ic_eye"
+        app:showAsAction="always"
+        android:title="Report Sighting"
+        />
+</menu>

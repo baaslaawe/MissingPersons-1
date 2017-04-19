@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ke.co.debechlabs.missingpersons.MissingPersonsListActivity">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:background="@color/colorIcons"
+        android:id="@+id/loader">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ProgressBar
+                android:id="@+id/fetchProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleLarge"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_below="@id/fetchProgress"
+                android:text="Fetching List of Missing Persons..."/>
+        </RelativeLayout>
+
+    </FrameLayout>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:id="@+id/missing_persons_list"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"></ListView>
+    <FrameLayout
+        android:id="@+id/no_data"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/nothing_icon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_nothing"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nothing_icon"
+                android:textAlignment="center"
+                android:id="@+id/missing_yet"
+                android:textSize="20dp"
+                android:text="There are no missing persons yet."/>
+            <Button
+                android:layout_width="match_parent"
+                android:text="REFRESH"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/missing_yet"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addMissingPerson"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:src="@mipmap/ic_person_add"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_anchor="@id/missing_persons_list"
+        />
+</android.support.design.widget.CoordinatorLayout>

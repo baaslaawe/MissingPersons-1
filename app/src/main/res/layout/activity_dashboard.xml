@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ke.co.debechlabs.missingpersons.DashboardActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/dash_menu_padding"
+            android:weightSum="1"
+            android:id="@+id/menu_missing_list"
+            android:background="#0091EA">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_list"
+                android:layout_weight="0.28" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="View Missing Persons"
+                android:textSize="20dp"
+                android:textColor="@color/colorIcons"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:layout_weight="0.72"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/dash_menu_padding"
+            android:id="@+id/menu_add_missing"
+            android:background="#00BFA5">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_person_add"
+                android:layout_weight="0.28" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Report Missing Persons"
+                android:textSize="20dp"
+                android:textColor="@color/colorIcons"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:layout_weight="0.72"/>
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="@dimen/dash_menu_padding"-->
+            <!--android:id="@+id/menu_seen_missing"-->
+            <!--android:background="#2196F3">-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@mipmap/ic_magnifying"-->
+                <!--android:layout_weight="0.28" />-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="Seen Missing Person"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textColor="@color/colorIcons"-->
+                <!--android:textAlignment="center"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_weight="0.72"/>-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#757575"
+            android:padding="@dimen/dash_menu_padding"
+            android:id="@+id/menu_family_profile"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_people"
+                android:layout_weight="0.28" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="My Family Profile"
+                android:textColor="@color/colorIcons"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:layout_weight="0.72"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

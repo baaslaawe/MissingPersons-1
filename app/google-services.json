@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1059175748152",
+    "firebase_url": "https://missing-persons.firebaseio.com",
+    "project_id": "missing-persons",
+    "storage_bucket": "missing-persons.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059175748152:android:deaa694953bd714f",
+        "android_client_info": {
+          "package_name": "ke.co.debechlabs.missingpersons"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059175748152-cku8bu94e7sjfh0pfpi4ncmj3ot8dou2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ke.co.debechlabs.missingpersons",
+            "certificate_hash": "5b9fe54cb253629a005bd6a73da97417a20477a7"
+          }
+        },
+        {
+          "client_id": "1059175748152-av6ivku5ri8mmpop333ler6jr65fsgs0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaf11JiTR_JZP05Lm-0Gy0llT9YqMVJlk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059175748152-av6ivku5ri8mmpop333ler6jr65fsgs0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

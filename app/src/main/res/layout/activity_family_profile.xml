@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ke.co.debechlabs.missingpersons.FamilyProfileActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/colorIcons"
+        android:minHeight="?attr/actionBarSize"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addFamilyMember"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:src="@mipmap/ic_person_add"
+        app:layout_anchorGravity="bottom|right|end"
+        />
+    <include layout="@layout/loading_layout" />
+    <include layout="@layout/content_family_members"/>
+    <include layout="@layout/no_members" />
+</android.support.design.widget.CoordinatorLayout>

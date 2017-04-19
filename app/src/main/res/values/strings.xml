@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Missing Persons</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_password">Your Password</string>
+    <string name="confirm_your_password">Confirm Your Password</string>
+    <string name="missing_person_name">Missing Person Name</string>
+    <string name="missing_person_nickname">Nick Name (if any)</string>
+    <string name="missing_person_residence">Where did the person live?</string>
+    <string name="missing_date_last_seen">Date Last Seen</string>
+    <string name="missing_last_wearing">Seen Last Wearing</string>
+    <string name="missing_location_last_seen">Location Last Seen</string>
+    <string name="missing_birthmarks">Birth Marks (if any)</string>
+    <string name="missing_disabilities">Disabilities (if any)</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="verify">Verify</string>
+    <string name="reload">Reload</string>
+    <string name="show_error">Failed to show CAPTCHA</string>
+    <string name="verification_success">Your answer is verified successfully</string>
+    <string name="verification_failed">You did not enter the CAPTCHA phrase correctly</string>
+    <string name="instruction">Enter the words above</string>
+    <string name="title_activity_seen_missing_person">Map</string>
+    <string name="seen_date">Date Seen</string>
+    <string name="search_location">Search Location</string>
+
+    <string name="facebook_app_id">1861739167399671</string>
+    <string name="fb_login_protocol_scheme">fb1861739167399671</string>
+
+
+    <string name="your_phone">Your Phonenumber</string>
+    <string name="err_name">Please fill in your name</string>
+    <string name="err_email">Please enter the correct email</string>
+    <string name="err_phone">Please enter the correct format for the phone number</string>
+    <string name="empty_password">Sorry. Please Fix this</string>
+    <string name="err_password_confirmation">Passwords do not match</string>
+
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="hint_email">Email</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="contact_person_name">Contact Person Name</string>
+    <string name="contact_person_number">Contact Person Mobile Number</string>
+    <string name="contact_person_name_alt">Alt. Contact Person</string>
+    <string name="contact_person_number_alt">Alt. Contact Person Mobile Number</string>
+    <string name="residence_not_empty">Residence cannot be empty</string>
+    <string name="cannot_be_empty">This field cannot be empty</string>
+    <string name="missing_person_age">Age In Years</string>
+    <string name="age_error">Please fill in the right age</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_view_member">View Member</string>
+    <string name="action_report_missing">Report As Missing</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="firstname_error">Please fill in the first name</string>
+    <string name="lastname_error">Please fill in the last name</string>
+</resources>
