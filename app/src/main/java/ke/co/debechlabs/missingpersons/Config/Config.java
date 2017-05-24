@@ -30,7 +30,7 @@ public class Config {
     public static final String recaptcha_private_key = "6Lc9jxwUAAAAACDHbwCqm2nGwWfgUv76wuMdtSLH";
     public static final String recaptcha_public_key = "6Lc9jxwUAAAAAF3_Ql-Uy0H0Do7tGQWBJqhdaXRb";
 
-    public static final String server_url = "http://00d10c2d.ngrok.io/missingpersons/";
+    public static final String server_url = "http://debechlabs.co.ke/missingpersons/";
 
     public String idToken;
 

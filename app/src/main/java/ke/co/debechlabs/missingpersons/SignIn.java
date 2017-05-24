@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -61,6 +63,9 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
 
     EditText etxUsername, etxPassword;
 
+    TextView txtsignUp, txtReset;
+    Button btnViewList, btnHelpfulInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +74,9 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
 
         this.etxUsername = (EditText)findViewById(R.id.txtUsername);
         this.etxPassword = (EditText)findViewById(R.id.txtPassword);
+        this.txtReset = (TextView) findViewById(R.id.txt_reset_password);
+        this.btnViewList = (Button) findViewById(R.id.viewMissingpersons);
+        this.btnHelpfulInfo = (Button) findViewById(R.id.helpfulinfo);
 
             mAuthListener = new FirebaseAuth.AuthStateListener() {
                 @Override
@@ -99,6 +107,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
 
             SignInButton googleSignInButton = (SignInButton) findViewById(R.id.google_sign_in_button);
             LoginButton facebookLoginButton = (LoginButton) findViewById(R.id.facebook_login_button);
+            this.txtsignUp = (TextView) findViewById(R.id.txtSignUp);
 
             googleSignInButton.setOnClickListener(this);
             facebookLoginButton.setReadPermissions("email", "public_profile");
@@ -119,6 +128,11 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
 
                 }
             });
+
+            this.txtsignUp.setOnClickListener(this);
+            this.txtReset.setOnClickListener(this);
+            this.btnViewList.setOnClickListener(this);
+            this.btnHelpfulInfo.setOnClickListener(this);
 
     }
 
@@ -144,7 +158,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
                 });
     }
 
-    void gotoSignUp(View view){
+    void gotoSignUp(){
         Intent intent = new Intent(SignIn.this, SignUpActivity.class);
         startActivity(intent);
     }
@@ -205,12 +219,12 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
                 });
     }
 
-    void gotoMissingPersons(View view){
+    void gotoMissingPersons(){
         Intent intent = new Intent(SignIn.this, MissingPersonsListActivity.class);
         startActivity(intent);
     }
 
-    void ResetPassword(View view){
+    void ResetPassword(){
         Intent intent = new Intent(SignIn.this, ResetPassword.class);
         startActivity(intent);
     }
@@ -221,7 +235,24 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener, G
             case R.id.google_sign_in_button:
                 googleSignIn();
                 break;
+            case R.id.txtSignUp:
+                gotoSignUp();
+                break;
+            case R.id.txt_reset_password:
+                ResetPassword();
+                break;
+            case R.id.viewMissingpersons:
+                gotoMissingPersons();
+                break;
+            case R.id.helpfulinfo:
+                gotoHelpfulInfo();
+                break;
         }
+    }
+
+    private void gotoHelpfulInfo(){
+        Intent intent = new Intent(SignIn.this, HelpfulInfo.class);
+        startActivity(intent);
     }
 
     private void googleSignIn(){

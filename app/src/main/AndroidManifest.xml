@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ke.co.debechlabs.missingpersons">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -123,7 +124,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FamilyProfileActivity" />
         </activity>
-        <activity android:name=".ViewFamilyMember"></activity>
+        <activity android:name=".ViewFamilyMember" />
+        <activity
+            android:name=".HelpfulInfo"
+            android:parentActivityName=".SignIn">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignIn" /></activity>
     </application>
 
 </manifest>
