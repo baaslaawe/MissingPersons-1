@@ -65,7 +65,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MyViewHo
         MenuInflater inflater = popupMenu.getMenuInflater();
         inflater.inflate(R.menu.family_member_menu, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new MyMenuItemClickListener(member_id));
-        popupMenu.show();
+//        popupMenu.show();
     }
 
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener{
