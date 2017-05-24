@@ -87,7 +87,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/addMissingPerson"
         android:layout_margin="16dp"
-        android:layout_gravity="bottom|end"
         android:src="@mipmap/ic_person_add"
         app:layout_anchorGravity="bottom|right|end"
         app:layout_anchor="@id/missing_persons_list"

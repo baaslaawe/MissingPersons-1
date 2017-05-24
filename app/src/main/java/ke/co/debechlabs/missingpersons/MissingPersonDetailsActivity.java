@@ -39,7 +39,7 @@ public class MissingPersonDetailsActivity extends AppCompatActivity implements V
 
     ImageLoader imageLoader;
     NetworkImageView header;
-    TextView txtPersonID, txtPhotoURL, txtPersonName, txtObNumber, txtDateSeen, txtLastSeenAt, txtAge, txtLastWearing, txtPhysicalDisabilities, txtBirthMarks, txtContactPerson, txtContactPersonNumber, txtAltContactPerson, txtAltContactPersonNumber;
+    TextView txtPersonID, txtSightings, txtPhotoURL, txtPersonName, txtObNumber, txtDateSeen, txtLastSeenAt, txtAge, txtLastWearing, txtPhysicalDisabilities, txtBirthMarks, txtContactPerson, txtContactPersonNumber, txtAltContactPerson, txtAltContactPersonNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,7 @@ public class MissingPersonDetailsActivity extends AppCompatActivity implements V
         txtDateSeen = (TextView) findViewById(R.id.last_seen_date);
         txtPersonID = (TextView) findViewById(R.id.person_id);
         txtPhotoURL = (TextView) findViewById(R.id.photo_url);
+        txtSightings = (TextView) findViewById(R.id.person_sightings);
 
         Context context = this;
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
@@ -95,6 +96,7 @@ public class MissingPersonDetailsActivity extends AppCompatActivity implements V
 
                         header.setImageUrl(Config.server_url + personObj.getString("missing_person_image"), imageLoader);
                         txtPersonID.setText(personObj.getString("id"));
+                        txtSightings.setText(personObj.getString("sightings"));
                         txtObNumber.setText(personObj.getString("ob_number"));
                         txtPersonName.setText(personObj.getString("missing_person_name"));
                         collapsingToolbarLayout.setTitle(personObj.getString("missing_person_name"));
@@ -152,7 +154,18 @@ public class MissingPersonDetailsActivity extends AppCompatActivity implements V
                 seenIntent.putExtra("id", txtPersonID.getText().toString());
                 seenIntent.putExtra("name", txtPersonName.getText().toString());
                 seenIntent.putExtra("photo", txtPhotoURL.getText().toString());
+                seenIntent.putExtra("missingDate", txtDateSeen.getText().toString());
                 startActivity(seenIntent);
+                break;
+
+            case R.id.action_view_sightings:
+                Intent viewSightingIntent = new Intent(MissingPersonDetailsActivity.this, PersonSightings.class);
+                viewSightingIntent.putExtra("id", txtPersonID.getText().toString());
+                viewSightingIntent.putExtra("name", txtPersonName.getText().toString());
+                viewSightingIntent.putExtra("photo", txtPhotoURL.getText().toString());
+                viewSightingIntent.putExtra("missingDate", txtDateSeen.getText().toString());
+                viewSightingIntent.putExtra("sightings", txtSightings.getText().toString());
+                startActivity(viewSightingIntent);
                 break;
         }
         return true;

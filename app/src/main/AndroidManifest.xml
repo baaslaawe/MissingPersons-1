@@ -130,7 +130,9 @@
             android:parentActivityName=".SignIn">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SignIn" /></activity>
+                android:value=".SignIn" />
+        </activity>
+        <activity android:name=".PersonSightings"></activity>
     </application>
 
 </manifest>

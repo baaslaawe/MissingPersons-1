@@ -83,6 +83,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/person_id"
                 android:visibility="gone"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/person_sightings"
+                android:visibility="gone"/>
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

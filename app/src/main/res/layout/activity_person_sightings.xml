@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="68dp"
+    sothree:umanoShadowHeight="4dp">
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/personDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <ke.co.debechlabs.missingpersons.util.CircularNetworkImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/jobs"
+                android:layout_marginRight="15dp"
+                android:id="@+id/personImage"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/personName"
+                    android:text="John Chrispine Otaalo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/missingDate"
+                    android:text="Missing on: 17th January 2016"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numberofSightings"
+                    android:text="Sightings: 30"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/detailsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/personDetailsContainer"
+            android:background="@color/colorDivider" />
+        <ListView
+            android:layout_below="@id/detailsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sightingsList" />
+    </RelativeLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

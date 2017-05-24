@@ -11,6 +11,11 @@
         android:title="Share"
         />
     <item
+        android:id="@+id/action_view_sightings"
+        app:showAsAction="never"
+        android:title="View Sightings"
+        />
+    <item
         android:id="@+id/action_report_sighting"
         android:icon="@drawable/ic_eye"
         app:showAsAction="always"
