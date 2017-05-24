@@ -86,7 +86,10 @@ public class DashboardActivity extends AppCompatActivity {
                 Session sess = new Session(DashboardActivity.this);
                 sess.logout();
                 break;
-
+            case R.id.helpfulinfo:
+                Intent intent = new Intent(DashboardActivity.this, HelpfulInfo.class);
+                startActivity(intent);
+                break;
             default:
                 break;
         }

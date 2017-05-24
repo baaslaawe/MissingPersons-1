@@ -18,4 +18,22 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDivider"
+            android:padding="10dp"
+            android:text="Helpful Police Contacts"
+            android:textColor="@color/colorPrimaryText"
+            android:id="@+id/titleText"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleText"
+            android:id="@+id/contactsListView"></ListView>
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
