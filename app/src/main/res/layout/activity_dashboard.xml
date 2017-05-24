@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="4">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -70,28 +70,28 @@
                 android:gravity="center_vertical"
                 android:layout_weight="0.72"/>
         </LinearLayout>
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="@dimen/dash_menu_padding"-->
-            <!--android:id="@+id/menu_seen_missing"-->
-            <!--android:background="#2196F3">-->
-            <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:src="@mipmap/ic_magnifying"-->
-                <!--android:layout_weight="0.28" />-->
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:text="Seen Missing Person"-->
-                <!--android:textSize="20dp"-->
-                <!--android:textColor="@color/colorIcons"-->
-                <!--android:textAlignment="center"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:layout_weight="0.72"/>-->
-        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/dash_menu_padding"
+            android:id="@+id/menu_my_listings"
+            android:background="#2196F3">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_list_bullet_white"
+                android:layout_weight="0.28" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="My Listings"
+                android:textSize="20dp"
+                android:textColor="@color/colorIcons"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:layout_weight="0.72"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

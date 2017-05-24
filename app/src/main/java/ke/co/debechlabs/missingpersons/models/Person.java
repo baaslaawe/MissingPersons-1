@@ -5,7 +5,7 @@ package ke.co.debechlabs.missingpersons.models;
  */
 
 public class Person {
-    private int id;
+    private int id, found;
     private String personname, reported_date, image_url;
 
     public int getId() {
@@ -38,5 +38,13 @@ public class Person {
 
     public void setImage_url(String image_url) {
         this.image_url = image_url;
+    }
+
+    public int getFound() {
+        return found;
+    }
+
+    public void setFound(int found) {
+        this.found = found;
     }
 }

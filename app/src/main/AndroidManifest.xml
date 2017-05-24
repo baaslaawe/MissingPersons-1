@@ -132,7 +132,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SignIn" />
         </activity>
-        <activity android:name=".PersonSightings"></activity>
+        <activity android:name=".PersonSightings" />
+        <activity android:name=".MyListingsActivity"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
     </application>
 
 </manifest>

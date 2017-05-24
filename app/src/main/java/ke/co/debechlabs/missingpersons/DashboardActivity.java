@@ -36,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         LinearLayout menuListMissingPersons = (LinearLayout) findViewById(R.id.menu_missing_list);
         LinearLayout menuAddMissingPersons = (LinearLayout) findViewById(R.id.menu_add_missing);
-//        LinearLayout menuSeenMissingPersons = (LinearLayout) findViewById(R.id.menu_seen_missing);
+        LinearLayout menuMyListings = (LinearLayout) findViewById(R.id.menu_my_listings);
         LinearLayout menuFamilyProfile = (LinearLayout) findViewById(R.id.menu_family_profile);
 
         menuListMissingPersons.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +59,14 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardActivity.this, NewMissingPersonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        menuMyListings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, MyListingsActivity.class);
                 startActivity(intent);
             }
         });

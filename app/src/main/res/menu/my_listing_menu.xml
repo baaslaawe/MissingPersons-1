@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_view_missing"
+        android:orderInCategory="101"
+        android:title="@string/action_view_missing" />
+    <item
+        android:id="@+id/action_mark_as_completed"
+        android:orderInCategory="102"
+        android:title= "Mark As Found" />
+</menu>
