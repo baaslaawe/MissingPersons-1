@@ -67,7 +67,6 @@ public class HelpfulInfo extends AppCompatActivity{
 
                 intent.setData(Uri.parse("tel:" + contact));
                 if ( ContextCompat.checkSelfPermission( HelpfulInfo.this, Manifest.permission.CALL_PHONE ) != PackageManager.PERMISSION_GRANTED ) {
-
                     ActivityCompat.requestPermissions( HelpfulInfo.this, new String[] {  Manifest.permission.CALL_PHONE  }, 1);
                 }else {
                     startActivity(intent);
